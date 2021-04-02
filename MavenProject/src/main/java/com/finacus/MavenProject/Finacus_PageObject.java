@@ -4,6 +4,7 @@ package com.finacus.MavenProject;
 public class Finacus_PageObject {
 
 	//*************************-------LOGIN-------*************************************************************
+	
 	public static final  String  logouturl = "http://103.78.168.227:9550/finaml_internalstatic/";
 	public static final  String  loginurl = "http://103.78.168.227:9550/finaml_internalstatic/";
 	
@@ -13,6 +14,7 @@ public class Finacus_PageObject {
 	public static final  String  Login = "//span[contains(text(),'Log In')]";
 
 	//*************************** --------DASHBOARD---------- *************************************************
+	
 	public static final String Home = "//*[name()='path' and contains(@d,'M10 20v-6h')]";
 	
 	public static final String Search = "//header/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]";
@@ -477,7 +479,8 @@ public class Finacus_PageObject {
 	public static final String ToDate = "//input[@id='todate']";
 	public static final String View = "//body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/span[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]";
 	public static final String Clear = "//span[contains(text(),'Clear')]";
-
+	
+	
 	public static final String EXECUTIONDATE = "//body/div[@id='root']/div[2]/div[1]/main[1]/div[2]/span[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/fieldset[1]/div[1]/div[1]/div[1]/div[2]/div[1]/label[2]/span[1]/span[1]/input[1]";
 
 	//Reporting On customer
@@ -489,6 +492,7 @@ public class Finacus_PageObject {
 	public static final String InvestigationDetails= "//input[@id='key.DocumentAttached']']";
 	public static final String RocClear= "//input[@id='key.DocumentAttached']']";
 
+	
 	//Report On Risk Rating
 	public static final String ReportOnRiskRating= "//span[contains(text(),'Report On Risk Rating')]";
 	public static final String CustomerNo= "//input[@id='customerId']";
@@ -532,11 +536,14 @@ public class Finacus_PageObject {
 	public static final String NextPage = "//body/div[@id='root']/div[2]/div[1]/main[1]/div[2]/span[1]/div[1]/div[2]/div[1]/fieldset[1]/div[2]/div[1]/div[1]/div[1]/fieldset[2]/div[1]/div[1]/table[1]/tfoot[1]/tr[1]/td[1]/div[1]/div[3]/span[4]/button[1]/span[1]/span[1]";
 
 	//************************************ ---- (7) Miscellaneous Report---------****************************************
-	public static final String MiscellaneousReport = "//body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[8]/a[1]/div[1]/div[2]";
+	public static final String MiscellaneousReport = "//div[contains(text(),'Miscellaneous Report')]";
 	
 	//Customer Claim Request
-	public static final String CustomerClaimRequest = "//body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[8]/div[1]/li[1]/a[1]/div[1]/div[2]";
-	public static final String ClientCode = "//*[@id='customerId']/.."; 
+	public static final String CustomerClaimRequest = "//div[contains(text(),'Customer Claim Request')]";
+	
+	public static final String ClientCode = "//*[@id='customerId']/";
+	
+	//public static final String ClientCode = "//input[@class='MuiInputBase-input MuiOutlinedInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd']";
 	
 	//public static final String SearchClaimList = "//*[text()='Search']"; 
 	public static final String SearchClaimList = "//span[normalize-space()='Search']";

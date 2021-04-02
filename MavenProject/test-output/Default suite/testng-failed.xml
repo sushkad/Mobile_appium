@@ -7,10 +7,10 @@
         <methods>
           <include name="MiscellaneousReport1"/>
           <include name="CloseApp"/>
-          <include name="Masters"/>
-          <include name="Coreparameters"/>
-          <include name="UserManagement"/>
+          <include name="Login"/>
           <include name="MiscellaneousReport2"/>
+          <include name="Menus"/>
+          <include name="Logout"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.finacus.MavenProject.FinAML -->

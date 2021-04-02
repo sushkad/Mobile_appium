@@ -62,6 +62,12 @@ public class FinAML extends Finacus_PageObject
 		 * else { String title = d.getTitle(); System.out.println(title);
 		 * Assert.assertEquals(title, "FinAML","FinAML"); Thread.sleep(1000); }
 		 */
+		
+		String url = "http://103.78.168.227:9550/finaml_internalstatic/";
+		StringBuffer sb = new StringBuffer(url);
+		System.out.println(sb.reverse());
+		System.out.println(sb.length());
+		
 	}
 
 	@Test (priority=1)	
@@ -82,9 +88,14 @@ public class FinAML extends Finacus_PageObject
 		 * File("E:\\FIN_MobiConnect\\screenshots\\1.jpg"));
 		 * System.out.println("Screenshot Captured Successfully"); //
 		 * d.switchTo().alert().accept(); Thread.sleep(200);
+		 * 
+		 * WebDriver augmentedDriver= new Augmenter().augment(driver);
+		   File screenShot = ((TakesScreenshot) augmentedDriver).getScreenshotAs(OutputType.FILE);
+		 * 
+		 * 
 		 */
-	}
 
+	}
 
 	@Test (priority=2)	
 	public void hrefLinks() throws InterruptedException
@@ -213,8 +224,9 @@ public class FinAML extends Finacus_PageObject
 		//Thread.sleep(200);
 
 		d.findElement(By.xpath(Searchblockunblock)).sendKeys(Keys.DOWN);
-		System.out.println("Searchblockunblock Down list"); 
+		System.out.println("Searchblockunblock Down list");
 		Thread.sleep(200);
+
 
 		d.findElement(By.xpath(Searchblockunblock)).sendKeys(Keys.ENTER);
 		System.out.println("Select menuBlock Unblock");
@@ -243,7 +255,9 @@ public class FinAML extends Finacus_PageObject
 			d.findElement(By.xpath("//span[@class='icon-logout-01']"));
 			System.out.println("Click on Logout button");
 		}
+
 		else 
+
 		{
 			d.close();
 
@@ -326,7 +340,7 @@ public class FinAML extends Finacus_PageObject
 		File screenshot = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshot, new
 
-		File("E:\\FIN_MobiConnect\\screenshots\\1.jpg"));
+				File("E:\\FIN_MobiConnect\\screenshots\\1.jpg"));
 		System.out.println("Screenshot Captured Successfully"); 
 
 		d.switchTo().alert().accept();
@@ -524,7 +538,7 @@ public class FinAML extends Finacus_PageObject
 		d.findElement(By.xpath(MiscellaneousReport)).click();
 		System.out.println("Click on MiscellaneousReport ");
 		Thread.sleep(300);
-		
+
 		d.findElement(By.xpath(CustomerClaimRequest)).click();
 		System.out.println("Click on Customer Claim Request ");
 		Thread.sleep(200);
@@ -535,7 +549,7 @@ public class FinAML extends Finacus_PageObject
 		d.findElement(By.xpath(ClientCode)).sendKeys("keys.ENTER");
 		System.out.println("Click on Client Id");
 		Thread.sleep(200);
-		
+
 		d.findElement(By.xpath(ViewCustomerInfo)).click();
 		System.out.println("Click on Search button");
 		Thread.sleep(200);
@@ -577,6 +591,7 @@ public class FinAML extends Finacus_PageObject
 		Thread.sleep(1000);
 
 	}
+	
 	@AfterSuite
 	public void CloseApp()
 	{
