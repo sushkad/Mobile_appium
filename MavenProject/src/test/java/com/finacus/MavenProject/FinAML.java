@@ -34,7 +34,7 @@ import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
-
+import org.openqa.selenium.TakesScreenshot;
 
 public class FinAML extends Finacus_PageObject  
 {
@@ -67,12 +67,17 @@ public class FinAML extends Finacus_PageObject
 		StringBuffer sb = new StringBuffer(url);
 		System.out.println(sb.reverse());
 		System.out.println(sb.length());
-		
+	
 	}
 
 	@Test (priority=1)	
 	public void Login() throws InterruptedException, IOException
 	{
+		
+		try
+		{
+			
+		
 		//d.get("http://103.78.168.227:9550/FinAML_InternalStatic/");
 		System.out.println("User is on Login Page");
 		d.findElement(By.id(Email)).sendKeys("testho");
@@ -81,21 +86,20 @@ public class FinAML extends Finacus_PageObject
 		System.out.println("Enter Password");
 		d.findElement(By.xpath(Login)).click();
 		Thread.sleep(200);
+		}
+		
+		catch(Exception e)
+		{
+			
+		Thread.sleep(3000);
+		System.out.println("Get the Screenshot");
 
-		/*
-		 * File screenshot = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
-		 * FileUtils.copyFile(screenshot, new
-		 * File("E:\\FIN_MobiConnect\\screenshots\\1.jpg"));
-		 * System.out.println("Screenshot Captured Successfully"); //
-		 * d.switchTo().alert().accept(); Thread.sleep(200);
-		 * 
-		 * WebDriver augmentedDriver= new Augmenter().augment(driver);
-		   File screenShot = ((TakesScreenshot) augmentedDriver).getScreenshotAs(OutputType.FILE);
-		 * 
-		 * 
-		 */
-
+		TakesScreenshot scrShot1 =((TakesScreenshot)d);
+		File SrcFile1=scrShot1.getScreenshotAs(OutputType.FILE);
+		File DestFile1=new File("E://FIN_MobiConnect//Login.png");
+		FileUtils.copyFile(SrcFile1, DestFile1);
 	}
+}
 
 	@Test (priority=2)	
 	public void hrefLinks() throws InterruptedException
@@ -111,7 +115,16 @@ public class FinAML extends Finacus_PageObject
 			System.out.println(url1);
 			System.out.println(url2);
 		}
+		
 		Thread.sleep(2000);
+		
+		String[] AgentReason = { "Agent not willing to print receipt", 
+				"Agent misbehaved", "Agent outlet closed", 
+				"Agent denying registration of complaint",
+                "Agent not accepting certain bills", 
+                "Agent overcharging" };
+	
+		System.out.println(AgentReason);
 	}
 
 	@Test (priority=3)	
@@ -130,6 +143,7 @@ public class FinAML extends Finacus_PageObject
 			System.out.println("User is on Home Page or Dashboard");
 
 		}
+		
 		else
 		{
 			System.out.println("User should be land on Login Page");
@@ -226,7 +240,6 @@ public class FinAML extends Finacus_PageObject
 		d.findElement(By.xpath(Searchblockunblock)).sendKeys(Keys.DOWN);
 		System.out.println("Searchblockunblock Down list");
 		Thread.sleep(200);
-
 
 		d.findElement(By.xpath(Searchblockunblock)).sendKeys(Keys.ENTER);
 		System.out.println("Select menuBlock Unblock");

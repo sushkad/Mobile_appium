@@ -6,11 +6,20 @@
       <class name="com.finacus.MavenProject.FinAML">
         <methods>
           <include name="MiscellaneousReport1"/>
+          <include name="SDNAssesmentTC1"/>
+          <include name="SDNAssesment0"/>
+          <include name="STRMonitoring"/>
+          <include name="Masters"/>
+          <include name="Coreparameters"/>
+          <include name="RiskAssessment"/>
+          <include name="STRMonitoringdates"/>
+          <include name="SDNAssesmentTC2"/>
+          <include name="Logout"/>
           <include name="CloseApp"/>
-          <include name="Login"/>
+          <include name="hrefLinks"/>
+          <include name="UserManagement"/>
           <include name="MiscellaneousReport2"/>
           <include name="Menus"/>
-          <include name="Logout"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.finacus.MavenProject.FinAML -->

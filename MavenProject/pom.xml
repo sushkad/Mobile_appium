@@ -1,104 +1,105 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>MavenProject</groupId>
-  <artifactId>MavenProject</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>Positivepay</name>
-  <description>Data Driver Approach</description>
-  
-   <!-- <wls:weblogic-web-app xmlns:wls="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-    http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd
-    http://xmlns.oracle.com/weblogic/weblogic-web-app
-    http://xmlns.oracle.com/weblogic/weblogic-web-app/1.4/weblogic-web-app.xsd">
-    
-        <wls:container-descriptor>
-            <wls:prefer-application-packages>
-                <wls:package-name>org.apache.xmlbeans.*</wls:package-name>
-            </wls:prefer-application-packages>
-        </wls:container-descriptor>
-    </wls:weblogic-web-app> -->
-    
-<dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>MavenProject</groupId>
+	<artifactId>MavenProject</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Positivepay</name>
+	<description>Data Driver Approach</description>
 
-	<dependency>
-      <groupId>io.rest-assured</groupId>
-      <artifactId>json-path</artifactId>
-      <version>4.3.0</version>
-      <scope>test</scope>
-</dependency>
-
-<dependency>
-      <groupId>io.rest-assured</groupId>
-      <artifactId>xml-path</artifactId>
-      <version>4.3.0</version>
-      <scope>test</scope>
-</dependency>
-
-
-
-<dependency>
-      <groupId>io.rest-assured</groupId>
-      <artifactId>json-schema-validator</artifactId>
-      <version>4.3.0</version>
-      <scope>test</scope>
-</dependency>
-
-<dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>4.3.3</version>
-    <scope>test</scope>
-</dependency>
-
-
-
- <dependency>
-    <groupId>io.appium</groupId>
-    <artifactId>java-client</artifactId>
-    <version>7.4.1</version>
-</dependency>
-
-	<dependency>
-    <groupId>com.google.inject</groupId>
-    <artifactId>guice</artifactId>
-    <version>4.2.3</version>
-	</dependency>
 	
-	<dependency>
-     <groupId>com.aventstack</groupId>
-     <artifactId>extentreports</artifactId>
-     <version>3.1.5</version>
-	</dependency>
-	
-<dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-lang3</artifactId>
-    <version>3.11</version>
-</dependency>
+	<dependencies>
 
- <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
-</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
 
-  <dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-lang3</artifactId>
-    <version>3.11</version>
-  </dependency>
-  
-  <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.3.0</version>
-    <scope>test</scope>
-  </dependency>
-  
-  
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>xml-path</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+
+		
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.3.3</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>5.0.0</version>
+		</dependency>
 
 
 
-</dependencies>
+
+	</dependencies>
 </project>
