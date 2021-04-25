@@ -67,17 +67,13 @@ public class FinAML extends Finacus_PageObject
 		StringBuffer sb = new StringBuffer(url);
 		System.out.println(sb.reverse());
 		System.out.println(sb.length());
-	
 	}
 
 	@Test (priority=1)	
 	public void Login() throws InterruptedException, IOException
 	{
-		
 		try
 		{
-			
-		
 		//d.get("http://103.78.168.227:9550/FinAML_InternalStatic/");
 		System.out.println("User is on Login Page");
 		d.findElement(By.id(Email)).sendKeys("testho");
@@ -270,7 +266,6 @@ public class FinAML extends Finacus_PageObject
 		}
 
 		else 
-
 		{
 			d.close();
 
